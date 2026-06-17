@@ -1,0 +1,4 @@
+node_modules/
+island_mail.db
+.env
+*.log

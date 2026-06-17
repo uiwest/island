@@ -34,7 +34,7 @@ db.exec(`
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname)));ic')));
 
 // 섬 생성 (회원가입)
 app.post('/api/islands', (req, res) => {
@@ -139,9 +139,7 @@ app.get('/api/islands/random/:exclude_id', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
-
+ res.sendFile(path.join(__dirname, 'index.html'));
 app.listen(PORT, () => {
   console.log(`🏝️  섬 우편 서버가 열렸어요! http://localhost:${PORT}`);
 });
